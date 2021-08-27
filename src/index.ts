@@ -1,2 +1,2 @@
-export { coompileTemplate } from "./compile";
+export { compileTemplate } from "./compile";
 export { loadLocalTemplate } from "./local";

@@ -7,7 +7,7 @@ import copy from 'recursive-copy'
 import { parseParameters } from './parse-parameters'
 import { loadLocalTemplate } from './local'
 
-export const coompileTemplate = async (manifestPath: string, params: string[], imagePath: string): Promise<void> => {
+export const compileTemplate = async (manifestPath: string, params: string[], imagePath: string): Promise<void> => {
   const template = await loadLocalTemplate(manifestPath);
 
   const paramValues = parseParameters(template.parameters, params);

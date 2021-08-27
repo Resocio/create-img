@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { program } from 'commander'
-import { coompileTemplate } from './compile';
+import { compileTemplate } from './compile';
 
 const runCompiler = async () => {
   program
@@ -13,7 +13,7 @@ const runCompiler = async () => {
     .option('-o, --output <imagePath>', 'output image file', './output.png')
     .action(async (manifestPath, options) => {
       console.log("Create image...");
-      await coompileTemplate(manifestPath, options.params, options.output);
+      await compileTemplate(manifestPath, options.params, options.output);
       console.log("Done!");
     });
 
